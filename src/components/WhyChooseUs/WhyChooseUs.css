@@ -1,0 +1,113 @@
+.why-choose-us {
+  background: var(--primary);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.why-choose-us__layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.why-choose-us__header {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.why-choose-us .section-title {
+  color: var(--white);
+}
+
+.why-choose-us__subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-top: 24px;
+}
+
+.why-choose-us__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.why-choose-us__card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.why-choose-us__card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-5px);
+}
+
+.why-choose-us__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: 1.5rem;
+}
+
+.why-choose-us__title {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.why-choose-us__desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-us__layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .why-choose-us__header {
+    position: static;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .why-choose-us__card {
+    padding: 24px;
+  }
+}

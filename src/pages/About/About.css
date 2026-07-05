@@ -1,0 +1,453 @@
+.about-page {
+  overflow: hidden;
+}
+
+.story-section {
+  background: var(--white);
+}
+
+.story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story__content .section-tag {
+  margin-bottom: 16px;
+}
+
+.story__content .section-title {
+  margin-bottom: 24px;
+}
+
+.story__text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.story__image {
+  position: relative;
+}
+
+.story__image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.story__image-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 20px 28px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.story__badge-year {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.story__badge-text {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.mission-section {
+  background: var(--bg);
+}
+
+.mission__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mission__card {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all var(--transition);
+}
+
+.mission__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.mission__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin: 0 auto 24px;
+}
+
+.mission__title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.mission__text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+.values-section {
+  background: var(--white);
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.values__card {
+  padding: 36px 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition);
+}
+
+.values__card:hover {
+  background: var(--white);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.values__card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, #C19B2E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin: 0 auto 18px;
+  transition: transform var(--transition);
+}
+
+.values__card:hover .values__card-icon {
+  transform: rotateY(180deg);
+}
+
+.values__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.values__card-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.timeline-section {
+  background: var(--bg);
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), rgba(212, 175, 55, 0.2));
+  transform: translateX(-50%);
+}
+
+.timeline__item {
+  position: relative;
+  width: 50%;
+  padding: 20px 0;
+}
+
+.timeline__item--left {
+  left: 0;
+  padding-right: 50px;
+}
+
+.timeline__item--right {
+  left: 50%;
+  padding-left: 50px;
+}
+
+.timeline__content {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  transition: all var(--transition);
+}
+
+.timeline__content:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+.timeline__dot-wrapper {
+  position: absolute;
+  top: 35px;
+  width: 24px;
+  height: 24px;
+}
+
+.timeline__item--left .timeline__dot-wrapper {
+  right: -62px;
+}
+
+.timeline__item--right .timeline__dot-wrapper {
+  left: -62px;
+}
+
+.timeline__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--accent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--z-elevated);
+}
+
+.timeline__year {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.timeline__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.timeline__desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.team-section {
+  background: var(--white);
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.team__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition);
+}
+
+.team__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.team__image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.team__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team__card:hover .team__image img {
+  transform: scale(1.08);
+}
+
+.team__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 31, 58, 0.9) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team__card:hover .team__overlay {
+  opacity: 1;
+}
+
+.team__overlay-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.team__info {
+  padding: 20px;
+  text-align: center;
+}
+
+.team__name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.team__role {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline__line {
+    left: 30px;
+  }
+
+  .timeline__item {
+    width: 100%;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline__item--left,
+  .timeline__item--right {
+    left: 0;
+  }
+
+  .timeline__item--left .timeline__dot-wrapper,
+  .timeline__item--right .timeline__dot-wrapper {
+    left: -48px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .story__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story__image-badge {
+    left: 10px;
+    bottom: 10px;
+    padding: 16px 20px;
+  }
+
+  .story__badge-year {
+    font-size: 0.95rem;
+  }
+
+  .mission__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .mission__card {
+    padding: 36px 24px;
+  }
+
+  .values__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .team__image {
+    height: 240px;
+  }
+
+  .timeline__content {
+    padding: 20px;
+  }
+}

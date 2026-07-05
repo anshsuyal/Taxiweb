@@ -1,0 +1,229 @@
+.tour-packages-page {
+  overflow: hidden;
+}
+
+.packages-section {
+  background: var(--bg);
+}
+
+.packages__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.packages__cat-btn {
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  transition: all var(--transition);
+}
+
+.packages__cat-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.packages__cat-btn.active {
+  background: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
+}
+
+.packages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.packages__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition);
+}
+
+.packages__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.packages__card-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.packages__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.packages__card:hover .packages__card-image img {
+  transform: scale(1.08);
+}
+
+.packages__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(11, 31, 58, 0.7) 0%, transparent 60%);
+}
+
+.packages__card-category {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(11, 31, 58, 0.85);
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.packages__card-duration {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--white);
+  background: rgba(11, 31, 58, 0.85);
+  padding: 6px 14px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.packages__card-duration svg {
+  color: var(--accent);
+}
+
+.packages__card-body {
+  padding: 24px;
+}
+
+.packages__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.packages__card-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.packages__card-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--gray-600);
+}
+
+.packages__card-highlights li svg {
+  color: var(--accent);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.packages__card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 18px;
+}
+
+.packages__card-season {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.packages__card-season svg {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.packages__card-price {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.packages__book-btn {
+  width: 100%;
+}
+
+.packages__empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.packages__empty p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--gray-500);
+}
+
+@media (max-width: 1024px) {
+  .packages__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .packages__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .packages__categories {
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .packages__cat-btn {
+    padding: 8px 20px;
+    font-size: 0.75rem;
+  }
+
+  .packages__card-image {
+    height: 200px;
+  }
+
+  .packages__card-body {
+    padding: 18px;
+  }
+}
