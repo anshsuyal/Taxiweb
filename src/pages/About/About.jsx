@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaBullseye, FaEye, FaShieldAlt, FaHandshake, FaHeart, FaClock } from 'react-icons/fa';
-import { achievements, teamMembers, company } from '../../utils/data';
+import { achievements } from '../../utils/data';
 import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
 import CTA from '../../components/CTA/CTA';
 import './About.css';

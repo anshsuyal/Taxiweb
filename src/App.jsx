@@ -7,7 +7,6 @@ import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import CallButton from './components/CallButton/CallButton';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import ScrollToTop from './components/ScrollToTop';
-
 const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'));
 const Services = lazy(() => import('./pages/Services/Services'));
@@ -46,10 +45,9 @@ function AnimatedRoutes() {
   );
 }
 
-export default function App() {
+function AppContent() {
   return (
-    <Router>
-      <ScrollToTop />
+    <>
       <Navbar />
       <main>
         <AnimatedRoutes />
@@ -58,6 +56,15 @@ export default function App() {
       <WhatsAppButton />
       <CallButton />
       <ScrollTop />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
     </Router>
   );
 }

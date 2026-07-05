@@ -1,0 +1,147 @@
+.booking-section {
+  background: var(--white);
+}
+
+.booking-steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.booking-step:last-child {
+  padding-bottom: 0;
+}
+
+.booking-step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+
+.booking-step-line-wrapper {
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  bottom: 0;
+  width: 2px;
+  z-index: 1;
+}
+
+.booking-step:last-child .booking-step-line-wrapper {
+  display: none;
+}
+
+.booking-step-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), rgba(245, 158, 11, 0.2));
+}
+
+.booking-step-content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.booking-step-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: rgba(245, 158, 11, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.booking-step-icon {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.booking-step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.booking-step-desc {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .booking-step-number {
+    width: 48px;
+    height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .booking-step-line-wrapper {
+    left: 24px;
+    top: 48px;
+  }
+
+  .booking-step {
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+
+  .booking-step-content {
+    padding-top: 4px;
+  }
+
+  .booking-step-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-step {
+    gap: 12px;
+  }
+
+  .booking-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .booking-step-line-wrapper {
+    left: 20px;
+    top: 40px;
+  }
+
+  .booking-step-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .booking-step-icon {
+    font-size: 1rem;
+  }
+}
