@@ -1,88 +1,450 @@
-.not-found-page {
+/* ===========================
+   Main Background
+=========================== */
+
+.notfound {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: var(--white);
-  padding: 40px 24px;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    #fafafa,
+    #ffffff 40%,
+    #f6f6f6 100%
+  );
 }
 
-.not-found__content {
-  text-align: center;
-  max-width: 500px;
+/* ===========================
+   Background Decoration
+=========================== */
+
+.notfound::before,
+.notfound::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    z-index:0;
 }
 
-.not-found__car {
-  font-size: 4rem;
-  color: var(--accent);
-  margin-bottom: 24px;
-  display: inline-block;
+.notfound::before{
+    width:350px;
+    height:350px;
+    background:#FFD54F55;
+    top:-120px;
+    left:-120px;
 }
 
-.not-found__title {
-  font-family: var(--font-heading);
-  font-size: 8rem;
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--accent) 0%, #C19B2E 40%, var(--accent) 70%, #E8C84A 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 8px;
-  animation: shimmer 3s ease-in-out infinite;
+.notfound::after{
+    width:320px;
+    height:320px;
+    background:#FFF3CD;
+    bottom:-120px;
+    right:-100px;
 }
 
-@keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Floating Lights */
+
+.light{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    animation:float 8s ease-in-out infinite;
 }
 
-.not-found__heading {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 16px;
+.light1{
+    width:240px;
+    height:240px;
+    background:#ffe08270;
+    top:15%;
+    left:8%;
 }
 
-.not-found__desc {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--gray-500);
-  line-height: 1.7;
-  margin-bottom: 32px;
+.light2{
+    width:180px;
+    height:180px;
+    background:#fff4c5;
+    bottom:10%;
+    right:12%;
 }
 
-.not-found__btn {
-  padding: 16px 40px;
-  font-size: 1rem;
+.light3{
+    width:120px;
+    height:120px;
+    background:#ffd54f66;
+    top:60%;
+    left:65%;
 }
 
-@media (max-width: 768px) {
-  .not-found__title {
-    font-size: 5rem;
-  }
-
-  .not-found__heading {
-    font-size: 1.4rem;
-  }
-
-  .not-found__car {
-    font-size: 3rem;
-  }
-
-  .not-found__desc {
-    font-size: 0.92rem;
-  }
+@keyframes float{
+    50%{
+        transform:translateY(-30px);
+    }
 }
 
-@media (max-width: 480px) {
-  .not-found__title {
-    font-size: 3.5rem;
-  }
+/* ===========================
+      Glass Card
+=========================== */
 
-  .not-found__heading {
-    font-size: 1.2rem;
-  }
+.card404{
+
+    position:relative;
+    z-index:2;
+
+    width:720px;
+    max-width:92%;
+
+    padding:70px 60px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08),
+        0 8px 20px rgba(255,193,7,.08);
+
+    transition:.45s ease;
+
+}
+
+.card404:hover{
+
+    transform:
+        translateY(-10px)
+        rotateX(5deg)
+        rotateY(-5deg);
+
+    box-shadow:
+        0 35px 70px rgba(0,0,0,.12),
+        0 10px 30px rgba(255,193,7,.2);
+
+}
+
+/* ===========================
+        Taxi
+=========================== */
+
+.taxi{
+
+    font-size:72px;
+
+    color:#D4AF37;
+
+    margin-bottom:25px;
+
+    display:inline-flex;
+
+    animation:
+        taxiFloat 3s ease-in-out infinite;
+
+    filter:drop-shadow(0 12px 20px rgba(212,175,55,.35));
+
+}
+
+@keyframes taxiFloat{
+
+    50%{
+        transform:
+            translateY(-12px)
+            rotate(-4deg);
+    }
+
+}
+
+/* ===========================
+          404
+=========================== */
+
+.title404{
+
+    font-size:170px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    margin:0;
+
+    letter-spacing:5px;
+
+    background:linear-gradient(
+        180deg,
+        #ffd54f,
+        #f4b400,
+        #b8860b
+    );
+
+    background-size:300%;
+
+    animation:shine 6s linear infinite;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 8px 0 rgba(255,255,255,.5),
+        0 20px 40px rgba(0,0,0,.08);
+
+}
+
+@keyframes shine{
+
+    100%{
+        background-position:300%;
+    }
+
+}
+
+/* ===========================
+      Text
+=========================== */
+
+.card404 h2{
+
+    font-size:36px;
+
+    color:#222;
+
+    margin-top:10px;
+
+    margin-bottom:15px;
+
+}
+
+.card404 p{
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    max-width:520px;
+
+    margin:auto auto 40px;
+
+}
+
+/* ===========================
+        Buttons
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.buttons a{
+
+    padding:16px 38px;
+
+    border-radius:999px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+/* Gold Button */
+
+.homeBtn{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    color:#222;
+
+    box-shadow:
+        0 12px 30px rgba(255,193,7,.3);
+
+}
+
+.homeBtn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 18px 35px rgba(255,193,7,.45);
+
+}
+
+/* White Button */
+
+.rideBtn{
+
+    background:white;
+
+    color:#444;
+
+    border:1px solid #ececec;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.05);
+
+}
+
+.rideBtn:hover{
+
+    background:#FFD54F;
+
+    color:#222;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+       Particles
+=========================== */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.particles span{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#FFD54F;
+
+    opacity:.25;
+
+    animation:particle linear infinite;
+
+}
+
+@keyframes particle{
+
+    from{
+
+        transform:
+            translateY(100vh)
+            scale(0);
+
+    }
+
+    to{
+
+        transform:
+            translateY(-120px)
+            scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+.particles span:nth-child(odd){
+    background:#fff2b3;
+}
+
+/* Keep your nth-child positions */
+
+/* ===========================
+      Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.card404{
+
+padding:45px 30px;
+
+}
+
+.title404{
+
+font-size:110px;
+
+}
+
+.card404 h2{
+
+font-size:28px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons a{
+
+justify-content:center;
+
+}
+
+.taxi{
+
+font-size:56px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.title404{
+
+font-size:82px;
+
+}
+
+.card404 h2{
+
+font-size:22px;
+
+}
+
+.card404 p{
+
+font-size:15px;
+
+}
+
 }

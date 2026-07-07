@@ -42,7 +42,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <img
-                src="https://i.pinimg.com/736x/fd/a9/10/fda910b122aaed5e73a39b8b6f367f66.jpg"
+                src="https://i.pinimg.com/736x/6f/a3/6a/6fa36aa2c367da06b2a4c8ae1cf9ee02.jpg"
                 alt="Travel in Uttarakhand"
                 className="about__image"
               />

@@ -1,71 +1,86 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FaCar } from 'react-icons/fa';
-import './NotFound.css';
-
-const floatAnimation = {
-  y: [0, -12, 0],
-  transition: {
-    duration: 2.5,
-    repeat: Infinity,
-    ease: 'easeInOut',
-  },
-};
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  FaTaxi,
+  FaArrowLeft,
+  FaMapMarkedAlt,
+} from "react-icons/fa";
+import "./NotFound.css";
 
 export default function NotFound() {
   return (
-    <motion.div
-      className="not-found-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
-    >
-      <div className="not-found__content">
+    <div className="notfound">
+
+      {/* Background Lights */}
+      <div className="light light1"></div>
+      <div className="light light2"></div>
+      <div className="light light3"></div>
+
+      {/* Floating Particles */}
+      <div className="particles">
+        {[...Array(20)].map((_, i) => (
+          <span key={i}></span>
+        ))}
+      </div>
+
+      <motion.div
+        className="card404"
+        initial={{ opacity: 0, scale: .8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: .8 }}
+      >
+
         <motion.div
-          className="not-found__car"
-          animate={floatAnimation}
+          className="taxi"
+          animate={{
+            x: [-300, 300, -300],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
-          <FaCar />
+          <FaTaxi />
         </motion.div>
 
         <motion.h1
-          className="not-found__title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className="title404"
+          animate={{
+            rotateX: [0, 15, 0],
+            rotateY: [0, -15, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          }}
         >
           404
         </motion.h1>
 
-        <motion.h2
-          className="not-found__heading"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-        >
-          Page Not Found
-        </motion.h2>
+        <h2>Oops! Route Not Found</h2>
 
-        <motion.p
-          className="not-found__desc"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          Oops! The page you're looking for doesn't exist or has been moved.
-        </motion.p>
+        <p>
+          Looks like the destination you're trying to reach doesn't exist.
+          Let's take you back home.
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.65 }}
-        >
-          <Link to="/" className="btn btn-primary not-found__btn">
-            Back to Home
+        <div className="buttons">
+
+          <Link to="/" className="homeBtn">
+            <FaArrowLeft />
+            Home
           </Link>
-        </motion.div>
-      </div>
-    </motion.div>
+
+          <Link to="/book-ride" className="rideBtn">
+            <FaMapMarkedAlt />
+            Book Ride
+          </Link>
+
+        </div>
+
+      </motion.div>
+
+    </div>
   );
 }

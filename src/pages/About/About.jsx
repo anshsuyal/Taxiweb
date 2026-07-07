@@ -85,7 +85,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="https://i.pinimg.com/1200x/ca/5c/7a/ca5c7ab9dd0c8183eb79110c10b07a73.jpg"
+                src="https://i.pinimg.com/736x/6f/a3/6a/6fa36aa2c367da06b2a4c8ae1cf9ee02.jpg"
                 alt="AVENTO team collaboration"
               />
             </motion.div>

@@ -19,13 +19,13 @@ const destinations = [
     id: 3,
     name: 'Haridwar',
     desc: 'An ancient city and important Hindu pilgrimage site in North India.',
-    image: 'https://i.pinimg.com/736x/39/07/17/390717d24262088001753404f781fc56.jpg'
+    image: 'https://i.pinimg.com/736x/ca/83/5a/ca835ae0742113c88f3b26527c7a9e74.jpg'
   },
   {
     id: 4,
     name: 'Kedarnath',
     desc: 'A majestic and holy town in the Himalayas, revered by millions.',
-    image: 'https://i.pinimg.com/1200x/5c/53/89/5c538971b5a8995e8f5d10fe0705c22e.jpg'
+    image: 'https://i.pinimg.com/736x/7f/07/61/7f0761737ed3ba2f3c1d33071ae463d0.jpg'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const destinations = [
     id: 6,
     name: 'Nainital',
     desc: 'A glittering jewel in the Himalayan necklace, blessed with scenic lakes.',
-    image: 'https://i.pinimg.com/736x/07/de/0e/07de0eb0362c2dbd5f40e4f18f19850c.jpg'
+    image: 'https://i.pinimg.com/736x/44/46/6a/44466a698ea6388e47570d90066a7b17.jpg'
   }
 ];
 
