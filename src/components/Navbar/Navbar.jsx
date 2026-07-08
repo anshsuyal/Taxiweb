@@ -1,11 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FaWhatsapp, FaChevronDown } from 'react-icons/fa';
 import { navLinks, company } from '../../utils/data';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { useEffect } from 'react';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -77,7 +76,7 @@ export default function Navbar() {
           </ul>
 
           <div className="navbar__actions">
-            <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Now</a>
+            <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="navbar__btn">Book Now</a>
             <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="navbar__whatsapp" aria-label="WhatsApp">
               <FaWhatsapp />
             </a>
@@ -135,7 +134,7 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="navbar__mobile-actions">
-              <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-primary" onClick={() => setMobileOpen(false)}>Book Now</a>
+              <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary" onClick={() => setMobileOpen(false)}>Book Now</a>
               <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="navbar__whatsapp" aria-label="WhatsApp">
                 <FaWhatsapp /> WhatsApp
               </a>

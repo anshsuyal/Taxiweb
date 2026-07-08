@@ -1,8 +1,8 @@
 import {
-  FaTaxi, FaPlane, FaRoad, FaBuilding, FaUsers, FaHeart,
+  FaTaxi, FaRoad, FaBuilding, FaUsers, FaHeart,
   FaMountain, FaTree, FaCar, FaUserTie,
   FaHeadset, FaDollarSign, FaShieldAlt, FaPumpSoap, FaClock,
-  FaMapMarkerAlt
+  FaMapMarkerAlt, FaWhatsapp, FaCheckCircle, FaSmile
 } from 'react-icons/fa';
 
 export const company = {
@@ -36,10 +36,10 @@ export const navLinks = [
 ];
 
 export const services = [
-  { id: 1, icon: FaTaxi, title: 'Local Taxi', slug: 'local', description: 'Reliable local taxi service in Dehradun and nearby areas for daily commutes, shopping, and city travel.', benefits: ['Professional drivers', 'GPS tracked', 'Affordable fares', '24/7 availability'] },
-  { id: 2, icon: FaPlane, title: 'Airport Transfer', slug: 'airport', description: 'Hassle-free Jolly Grant Airport transfers with flight tracking, meet-and-greet, and luggage assistance.', benefits: ['Flight tracking', 'Meet & greet', 'Luggage help', 'On-time pickup'] },
-  { id: 3, icon: FaRoad, title: 'Outstation Taxi', slug: 'outstation', description: 'Comfortable long-distance journeys to Mussoorie, Rishikesh, Nainital, and all Uttarakhand destinations.', benefits: ['Experienced drivers', 'Well-maintained cars', 'Flexible stops', 'Round trips'] },
-  { id: 4, icon: FaMountain, title: 'Char Dham Yatra', slug: 'chardham', description: 'Complete Char Dham Yatra packages including Yamunotri, Gangotri, Kedarnath, and Badrinath.', benefits: ['Customized itinerary', 'Spiritual guidance', 'Comfortable stay', 'All permits'] },
+  { id: 1, icon: FaTaxi, title: 'Reliable local taxi service…', slug: 'local', description: 'Fast, safe, and affordable taxi services across Dehradun with professional drivers, clean vehicles, transparent pricing, and 24/7 customer support for local travel, shopping, business meetings, and sightseeing.', benefits: ['Sanitized Vehicles','Verified Drivers','No Hidden Charges','24×7 Support','Online Booking','Instant WhatsApp Confirmation'] },
+  { id: 2, icon: FaTaxi, title: 'Airport Transfer', slug: 'airport', description: 'Enjoy seamless airport transfers to and from Jolly Grant Airport with professional chauffeurs, real-time flight tracking, punctual pickups, and comfortable vehicles. Whether you’re arriving or departing, we ensure a safe, stress-free, and premium travel experience.', benefits: ['Flight tracking', 'Meet & greet', 'Luggage help', 'On-time pickup'] },
+  { id: 3, icon: FaRoad, title: 'Outstation Taxi', slug: 'outstation', description: 'Travel comfortably to Mussoorie, Rishikesh, Haridwar, Nainital, Jim Corbett, Auli, Chopta, and every major destination across Uttarakhand. Our well-maintained vehicles and experienced drivers ensure a safe, scenic, and hassle-free journey every time.', benefits: ['Experienced Local Drives', 'Saanitizes & comfortable Vehicles', 'Flexible Stops on Request', 'One-way & Round Trip Available'] },
+  { id: 4, icon: FaMountain, title: 'Char Dham Yatra', slug: 'chardham', description: 'Embark on a sacred Char Dham Yatra with our all-inclusive travel packages covering Yamunotri, Gangotri, Kedarnath, and Badrinath. We take care of transportation, accommodation, route planning, and permits so you can focus on your spiritual journey with complete peace of mind.', benefits: ['Customized itinerary', 'Spiritual guidance', 'Comfortable stay', 'All permits'] },
   { id: 5, icon: FaTree, title: 'Tour Packages', slug: 'tours', description: 'Curated tour packages to Uttarakhand\'s top destinations with personalized itineraries and guides.', benefits: ['Tailored plans', 'Local guides', 'Best hotels', 'Sightseeing'] },
   { id: 6, icon: FaBuilding, title: 'Corporate Travel', slug: 'corporate', description: 'Professional corporate transportation solutions for business meetings, events, and executive travel.', benefits: ['Premium fleet', 'Punctual service', 'Billing options', 'Dedicated support'] },
   { id: 7, icon: FaUsers, title: 'Family Tours', slug: 'family', description: 'Safe and comfortable family tour packages with child-friendly vehicles and experienced drivers.', benefits: ['Safe driving', 'Spacious cars', 'Flexible timing', 'Family discounts'] },
@@ -90,6 +90,13 @@ export const teamMembers = [
   { name: 'Sunita Rawat', role: 'Operations Head', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80' },
   { name: 'Manoj Joshi', role: 'Fleet Manager', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
   { name: 'Kavita Bhatt', role: 'Customer Relations', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80' },
+];
+
+export const bookingSteps = [
+  { id: 1, icon: FaWhatsapp, title: 'Contact Us', description: 'Reach out via WhatsApp, phone, or our website form to tell us about your travel requirements.' },
+  { id: 2, icon: FaCar, title: 'Choose Your Ride', description: 'Select from our premium fleet of sedans, SUVs, and tempo travellers based on your needs.' },
+  { id: 3, icon: FaCheckCircle, title: 'Confirm Booking', description: 'Get instant confirmation with driver details, fare estimate, and pickup information.' },
+  { id: 4, icon: FaSmile, title: 'Enjoy Your Journey', description: 'Sit back and relax as our professional driver takes you to your destination safely.' },
 ];
 
 export const achievements = [

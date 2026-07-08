@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FaBullseye, FaEye, FaShieldAlt, FaHandshake, FaHeart, FaClock } from 'react-icons/fa';
-import { achievements } from '../../utils/data';
 import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
 import CTA from '../../components/CTA/CTA';
 import './About.css';
@@ -45,7 +44,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            Beyond Every Journey — Your trusted travel partner since 2013
+            Your Trusted Travel Partner Across Uttarakhand — Safe, Reliable & Comfortable Journeys
           </motion.p>
         </div>
       </section>
@@ -63,18 +62,13 @@ export default function About() {
               <span className="section-tag">Our Story</span>
               <h2 className="section-title">The AVENTO Journey</h2>
               <p className="story__text">
-                Founded in 2013 in the heart of Dehradun, AVENTO Global Travel Solutions began with a simple vision — 
-                to transform the way people travel across Uttarakhand. What started with a small fleet of 5 cars 
-                has grown into a premier travel company trusted by thousands.
-              </p>
-              <p className="story__text">
-                Our mission is to provide safe, reliable, and comfortable travel solutions at competitive prices. 
-                From local city rides to the sacred Char Dham Yatra, from airport transfers to corporate travel 
-                management — we handle every journey with the same dedication and professionalism.
-              </p>
-              <p className="story__text">
-                With a fleet of 50+ well-maintained vehicles, experienced drivers, and round-the-clock customer 
-                support, we are committed to making every journey memorable and stress-free.
+               Avento Global Travel Solutions was founded with a simple vision—to redefine the way people travel across Uttarakhand by offering safe, comfortable, and dependable transportation services. We understand that every journey is unique, whether it’s a family vacation, a spiritual pilgrimage, a business trip, or a weekend getaway. That’s why we focus on delivering personalized travel experiences with a commitment to quality, punctuality, and customer satisfaction.</p>
+
+<p>From seamless airport transfers and local sightseeing tours to Char Dham Yatra, hill station trips, corporate travel, and customized outstation journeys, Avento offers complete travel solutions tailored to every traveler’s needs. Our experienced and courteous drivers, clean and well-maintained vehicles, and transparent pricing ensure that every ride is smooth, secure, and stress-free.</p>
+
+<p>We believe that great journeys are built on trust, reliability, and attention to detail. Every booking is handled with professionalism, ensuring our customers receive timely service, comfortable rides, and complete peace of mind throughout their journey. Whether you’re exploring the breathtaking beauty of Mussoorie, Rishikesh, Nainital, Auli, Jim Corbett, or embarking on the sacred Char Dham Yatra, our team is dedicated to making your travel experience effortless and memorable.</p>
+
+<p>At Avento, we don’t just provide transportation—we create travel experiences that leave lasting memories. With a customer-first approach, 24×7 support, flexible booking options, and an unwavering commitment to excellence, we strive to become the most trusted travel partner for individuals, families, and businesses across Uttarakhand. Every mile we travel reflects our promise of safety, comfort, transparency, and exceptional service, ensuring that every journey with Avento is one you’ll always remember.
               </p>
             </motion.div>
             <motion.div
@@ -108,8 +102,8 @@ export default function About() {
               </div>
               <h3 className="mission__title">Our Mission</h3>
               <p className="mission__text">
-                To provide safe, reliable, and comfortable travel solutions that exceed expectations, 
-                while promoting tourism and connectivity across Uttarakhand.
+                To deliver safe, comfortable, and transparent travel services with professional drivers, 
+                well-maintained vehicles, and 24×7 customer support across Uttarakhand.
               </p>
             </motion.div>
             <motion.div
@@ -124,8 +118,8 @@ export default function About() {
               </div>
               <h3 className="mission__title">Our Vision</h3>
               <p className="mission__text">
-                To be Uttarakhand's most trusted travel partner, setting industry standards for quality, 
-                safety, and customer satisfaction in every journey we undertake.
+                To become Uttarakhand’s most trusted travel brand by delivering exceptional service,
+                fair pricing, and memorable travel experiences.
               </p>
             </motion.div>
           </div>
@@ -168,47 +162,6 @@ export default function About() {
               );
             })}
           </motion.div>
-        </div>
-      </section>
-
-      <section className="section timeline-section">
-        <div className="container">
-          <motion.div
-            className="section-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="section-tag">Our Journey</span>
-            <h2 className="section-title">Company Timeline</h2>
-            <p className="section-subtitle">
-              Milestones that shaped AVENTO into what it is today
-            </p>
-          </motion.div>
-
-          <div className="timeline">
-            <div className="timeline__line" />
-            {achievements.map((item, index) => (
-              <motion.div
-                key={item.year}
-                className={`timeline__item ${index % 2 === 0 ? 'timeline__item--left' : 'timeline__item--right'}`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="timeline__content">
-                  <div className="timeline__dot-wrapper">
-                    <div className="timeline__dot" />
-                  </div>
-                  <span className="timeline__year">{item.year}</span>
-                  <h3 className="timeline__title">{item.title}</h3>
-                  <p className="timeline__desc">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -41,7 +41,7 @@ export default function BookingProcess() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
         >
-          {bookingSteps.map((step, index) => {
+          {bookingSteps.map((step) => {
             const Icon = step.icon;
             return (
               <motion.div

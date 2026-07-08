@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import {
   FaTaxi,
   FaArrowLeft,
-  FaMapMarkedAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
+import { company } from "../../utils/data";
 import "./NotFound.css";
 
 export default function NotFound() {
@@ -72,10 +73,10 @@ export default function NotFound() {
             Home
           </Link>
 
-          <Link to="/book-ride" className="rideBtn">
-            <FaMapMarkedAlt />
+          <a href={company.whatsapp} target="_blank" rel="noopener noreferrer" className="rideBtn">
+            <FaWhatsapp />
             Book Ride
-          </Link>
+          </a>
 
         </div>
 

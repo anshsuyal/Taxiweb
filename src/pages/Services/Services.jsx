@@ -8,7 +8,7 @@ const serviceImages = {
   local: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80',
   airport: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
   outstation: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80',
-  chardham: 'https://images.unsplash.com/photo-1621961458348-013f03d89d2d?w=600&q=80',
+  chardham: 'https://i.pinimg.com/736x/87/ac/e4/87ace462bdadd70bf63ccfd0cbfa9e99.jpg',
   tours: 'https://images.unsplash.com/photo-1501785888041-af3ef425b470?w=600&q=80',
   corporate: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
   family: 'https://images.unsplash.com/photo-1549633030-91b9e3e5e13e?w=600&q=80',
